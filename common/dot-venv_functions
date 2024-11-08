@@ -1,0 +1,54 @@
+VENV_DIR="$HOME/.venvs"
+
+if [ ! -d "$VENV_DIR" ]; then
+    mkdir -p "$VENV_DIR"
+fi
+
+error_nonexistant_venv() {
+    echo "ERROR: Virtual environment '$1' does not exist."
+}
+
+error_venv_already_exists() {
+    echo "ERROR: Virtual environment '$1' already exists."
+}
+
+venv_create() {
+    NEW_VENV="$VENV_DIR/$1"
+    
+    if [ -d "$NEW_VENV" ]; then
+        error_venv_already_exists "$1"
+        return 1
+    fi
+
+    python3 -m venv $NEW_VENV
+}
+
+venv_activate() {
+    VENV="$VENV_DIR/$1"
+
+    if [ ! -d "$VENV" ]; then
+        error_nonexistant_venv "$1"
+        return 1
+    fi
+
+    source "$VENV/bin/activate"
+}
+
+venv_remove() {
+    VENV="$VENV_DIR/$1"
+
+    if [ ! -d "$VENV" ]; then
+        error_nonexistant_venv "$1"
+        return 1
+    fi
+
+    if declare -fF deactivate > /dev/null; then
+        deactivate
+    fi
+
+    rm -rf "$VENV"
+}
+
+venv_list() {
+    find $VENV_DIR -mindepth 1 -maxdepth 1 -type d -exec basename {} \;
+}
