@@ -12,4 +12,6 @@ normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 decorations = "None"
 startup_mode = "Maximized"
 dynamic_padding = true
+blur = true
+opacity = 0.5
 
