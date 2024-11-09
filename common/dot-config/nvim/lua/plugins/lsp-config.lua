@@ -1,13 +1,18 @@
 local language_servers = {
     "lua_ls",
     "pyright",
-    "dockerls"
+    "dockerls",
+    "zls"
 }
 
 return {
     {
         "williamboman/mason.nvim",
-        opts = {}
+        opts = {
+            ui = {
+                border = "rounded"
+            }
+        }
     },
     {
         "williamboman/mason-lspconfig.nvim",
