@@ -7,7 +7,8 @@ return {
             configs.setup({
                 ensure_installed = {
                     "lua",
-                    "python"
+                    "python",
+                    "zig"
                 },
                 sync_install = false,
                 highlight = { enable = true },
