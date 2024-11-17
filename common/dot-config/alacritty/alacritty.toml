@@ -6,6 +6,7 @@ general.import = [
 TERM = "xterm-256color"
 
 [font]
+size = 15
 normal = { family = "RobotoMono Nerd Font", style = "Regular" }
 
 [window]
@@ -14,4 +15,9 @@ startup_mode = "Maximized"
 dynamic_padding = true
 blur = true
 opacity = 0.75
+
+[keyboard]
+bindings = [
+    { key = "f", mods = "Control", action = "ToggleMaximized" },
+]
 
