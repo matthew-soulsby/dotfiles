@@ -27,11 +27,11 @@ return {
                 telescope.load_extension(plugin)
             end
 
-            vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true <CR>', {})
+            vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true <CR>', { noremap = true, silent = true })
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>tb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-            vim.keymap.set("n", "<leader>fb", ':Telescope file_browser hidden=true <CR>', {})
+            vim.keymap.set("n", "<leader>fb", ':Telescope file_browser hidden=true <CR>', { noremap = true, silent = true })
         end
     },
     {

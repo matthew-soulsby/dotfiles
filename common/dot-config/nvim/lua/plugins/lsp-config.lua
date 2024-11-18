@@ -1,8 +1,10 @@
 local language_servers = {
-    "lua_ls",
-    "pyright",
-    "dockerls",
-    "zls"
+    "lua_ls",       -- Lua
+    "pyright",      -- Python
+    "dockerls",     -- Docker
+    "zls",          -- Zig
+    "ts_ls",        -- JS/TS
+    "volar",        -- Vue
 }
 
 return {
