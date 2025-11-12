@@ -4,7 +4,7 @@ local language_servers = {
     "dockerls",     -- Docker
     "zls",          -- Zig
     "ts_ls",        -- JS/TS
-    "volar",        -- Vue
+    "tinymist",     -- Typst
 }
 
 return {

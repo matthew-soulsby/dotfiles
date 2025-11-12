@@ -119,3 +119,6 @@ if [ -f "$HOME/.zshrc_extras" ]; then
     source ~/.zshrc_extras
 fi
 
+
+# Created by `pipx` on 2024-12-12 08:09:16
+export PATH="$PATH:/Users/matthewsoulsby/.local/bin"
